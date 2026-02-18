@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a1a1a;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+h1 {
+	background-color: white;
+	border-radius: 10px;
+	margin-top: 20px;
+    padding: 10px 25px;
+}
+
+legend {
+	color: white;
+}
+
+.container {
+    text-align: center;
+
+}
+
+.tabuleiro {
+    display: grid;
+    grid-template-columns: repeat(8, 60px);
+    grid-template-rows: repeat(8, 60px);
+    border: 5px solid #444;
+}
+
+.casa {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+.visitada {
+    background-color: #baca44 !important; /* Um verde mais claro/amarelado */
+    color: #444;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+/* Lógica para colorir o tabuleiro (Xadrez real) */
+.tabuleiro div:nth-child(-n+8):nth-child(odd),
+.tabuleiro div:nth-child(n+9):nth-child(-n+16):nth-child(even),
+.tabuleiro div:nth-child(n+17):nth-child(-n+24):nth-child(odd),
+.tabuleiro div:nth-child(n+25):nth-child(-n+32):nth-child(even),
+.tabuleiro div:nth-child(n+33):nth-child(-n+40):nth-child(odd),
+.tabuleiro div:nth-child(n+41):nth-child(-n+48):nth-child(even),
+.tabuleiro div:nth-child(n+49):nth-child(-n+56):nth-child(odd),
+.tabuleiro div:nth-child(n+57):nth-child(-n+64):nth-child(even) {
+    background-color: #eeeed2; /* Claro */
+}
+
+.tabuleiro div {
+    background-color: #769656; /* Escuro */
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 10px 25px;
+    background-color: #769656;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #5d7a44;
+}
