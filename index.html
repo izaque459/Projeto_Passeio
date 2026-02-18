@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passeio do Cavalo Dinâmico</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Passeio do Cavalo</h1>
+        
+        <div class="controles">
+			<fieldset>
+				<legend> Seleção de tamanho de tabuleiro </legend>
+				<select id="seletorTamanho">
+					<option value="tabuleiros/Tabuleiro8.html">Tabuleiro 8x8</option>
+					<option value="tabuleiros/Tabuleiro10.html">Tabuleiro 10x10</option>
+				</select>
+			</fieldset>
+            <button onclick="configurarEIniciar()" class="btn">Iniciar</button>
+			
+        </div>
+
+        <div id="container-tabuleiro">
+            </div>
+    </div>
+
+	<script>
+        function configurarEIniciar() {
+            const seletor = document.getElementById("seletorTamanho");
+            const urlDestino = seletor.value;
+
+            // Verifica se o valor termina com .html para redirecionar
+            if (urlDestino.includes(".html")) {
+                window.location.href = urlDestino;
+            } else {
+                alert("Por favor, selecione uma opção válida de tabuleiro.");
+            }
+        }
+		
+	</script>
+</body>
+</html>
