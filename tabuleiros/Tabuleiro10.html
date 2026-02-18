@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuleiro 10x10 - Passeio do Cavalo</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Ajuste crucial para o grid de 10 colunas */
+        .tabuleiro {
+            display: grid;
+            grid-template-columns: repeat(10, 50px); /* 10 colunas de 50px */
+            grid-template-rows: repeat(10, 50px);    /* 10 linhas de 50px */
+            border: 2px solid #333;
+            width: fit-content;
+            margin: 20px auto;
+        }
+
+        .casa {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Lógica de cores para tabuleiro 10x10 */
+        .casa:nth-child(odd) { background-color: #eeeed2; }
+        .casa:nth-child(even) { background-color: #769656; }
+        
+        /* Ajuste para que as cores alternem corretamente em linhas pares */
+        /* Em um grid par (10), precisamos inverter a lógica a cada 10 casas */
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Tabuleiro 10x10</h1>
+        <div class="tabuleiro" id="tabuleiro"></div>
+
+        <button onclick="iniciarPasseio(10)" class="btn">Iniciar Passeio do Cavalo</button>
+    </div>
+
+    <script>
+        function gerarTabuleiro() {
+            const tabuleiro = document.getElementById("tabuleiro");
+            const letras = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
+            
+            for (let linha = 10; linha >= 1; linha--) {
+                for (let col = 0; col < 10; col++) {
+                    const casa = document.createElement("div");
+                    casa.id = letras[col] + linha;
+                    casa.classList.add("casa");
+                    
+                    // Lógica para alternar cores em tabuleiro de tamanho par
+                    if ((linha + col) % 2 === 0) {
+                        casa.style.backgroundColor = "#769656"; // Verde
+                    } else {
+                        casa.style.backgroundColor = "#eeeed2"; // Bege
+                    }
+                    
+                    tabuleiro.appendChild(casa);
+                }
+            }
+        }
+
+        // Chama a função ao carregar a página
+        gerarTabuleiro();
+
+        
+    </script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
