@@ -10,7 +10,7 @@ para encontrar soluções em tempo real para diferentes tamanhos de tabuleiro.
 
 	Tabuleiro Dinâmico: Escolha entre o padrão 8X8 ou o desafiador 10X10.
 	Algoritmo de Warnsdorff: Implementação otimizada que prioriza casas com menos saídas, reduzindo
-				a necessidade de backtracking pesado.
+		a necessidade de backtracking pesado.
 	Visualização em Tempo Real: Animação do percurso do cavalo com rastro visual das casas visitadas.
 	Posicionamento Aleatório: Cada simulação começa em uma casa diferente, garantindo caminhos únicos.
 
@@ -32,8 +32,34 @@ para encontrar soluções em tempo real para diferentes tamanhos de tabuleiro.
 	CSS Grid: Renderização dinâmica da grade do tabuleiro.
 	HTML5: Estrutura semântica e interface do usuário.
  
+##🤝 Colaboração Humano-IA
+Este projeto foi desenvolvido através de um processo de Pair Programming entre mim e a IA (Gemini). 
+Abaixo, detalho como as responsabilidades foram divididas:
+
+###👤 Minha Contribuição (Idealização e Arquitetura)
+	Concepção do Projeto: Definição do escopo, desde a criação de um tabuleiro de xadrez visual 
+		até a implementação de um resolvedor algorítmico.
+
+	Lógica de Negócio: Decisão estratégica de utilizar a Heurística de Warnsdorff 
+		para otimizar o tempo de resposta do algoritmo.
+
+	Decisões de UX/UI: Idealização da interface, escolha das cores do tabuleiro e a exigência 
+	de um sistema dinâmico que suportasse diferentes tamanhos (8x8 e 10x10) em uma única página.
+
+	Refatoração e Debugging: Identificação de bugs de fluxo (como o problema de redirecionamento de páginas)
+	e correção de erros de lógica nas coordenadas do cavalo.
+
+###🤖 Contribuição da IA (Implementação e Refinamento)
+	Escrita de Código Base: Geração da estrutura inicial do HTML, estilização via CSS Grid 
+		e tradução do algoritmo de Python para JavaScript.
+
+	Otimização Técnica: Sugestão de métodos assíncronos (async/await) para criar a animação 
+		do cavalo percorrendo o tabuleiro.
+
+	Documentação: Auxílio na estruturação deste arquivo README e explicações técnicas 
+		sobre o funcionamento do backtracking. 
  
-# Abra o arquivo index.html em seu navegador de preferência.
+## Abra o arquivo index.html em seu navegador de preferência.
 
 
 
