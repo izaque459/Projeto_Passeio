@@ -14,7 +14,7 @@ para encontrar soluções em tempo real para diferentes tamanhos de tabuleiro.
 	Visualização em Tempo Real: Animação do percurso do cavalo com rastro visual das casas visitadas.
 	Posicionamento Aleatório: Cada simulação começa em uma casa diferente, garantindo caminhos únicos.
 
-🧠 O Algoritmo
+## 🧠 O Algoritmo
 
 	O projeto resolve um problema clássico de grafos onde o cavalo deve visitar todas as casas 
 	do tabuleiro exatamente uma vez.
@@ -32,11 +32,11 @@ para encontrar soluções em tempo real para diferentes tamanhos de tabuleiro.
 	CSS Grid: Renderização dinâmica da grade do tabuleiro.
 	HTML5: Estrutura semântica e interface do usuário.
  
-##🤝 Colaboração Humano-IA
+## 🤝 Colaboração Humano-IA
 Este projeto foi desenvolvido através de um processo de Pair Programming entre mim e a IA (Gemini). 
 Abaixo, detalho como as responsabilidades foram divididas:
 
-###👤 Minha Contribuição (Idealização e Arquitetura)
+### 👤 Minha Contribuição (Idealização e Arquitetura)
 	Concepção do Projeto: Definição do escopo, desde a criação de um tabuleiro de xadrez visual 
 		até a implementação de um resolvedor algorítmico.
 
@@ -49,9 +49,9 @@ Abaixo, detalho como as responsabilidades foram divididas:
 	Refatoração e Debugging: Identificação de bugs de fluxo (como o problema de redirecionamento de páginas)
 	e correção de erros de lógica nas coordenadas do cavalo.
 
-###🤖 Contribuição da IA (Implementação e Refinamento)
+### 🤖 Contribuição da IA (Implementação e Refinamento)
 	Escrita de Código Base: Geração da estrutura inicial do HTML, estilização via CSS Grid 
-		e tradução do algoritmo de Python para JavaScript.
+		e tradução do algoritmo original implementado em Python para JavaScript.
 
 	Otimização Técnica: Sugestão de métodos assíncronos (async/await) para criar a animação 
 		do cavalo percorrendo o tabuleiro.
